@@ -37,3 +37,13 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+document.getElementById("descargarCV").addEventListener("click", function() {
+    const link = document.createElement("a");
+    link.href = "img/Currículum_Francisco_Espinoza.pdf";
+    link.download = "Currículum_Francisco_Espinoza.pdf";
+    link.target = "_self";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
